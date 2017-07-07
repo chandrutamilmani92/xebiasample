@@ -1,0 +1,29 @@
+<div class="background-view" ng-controller="SosCtrl">
+        <div class="align-content-center">
+    <div class="label-align"><h3>Star Wars</h3></div>
+    <!-- Main Form -->
+    <div class="col-sm-5">
+        <form id="login-form">
+            <div class="main-login-form">
+                <div class="login-group">
+                    <div class="form-group" ng-if="!username">
+                        <div ng-if="messageForUsername" class="error-message">{{messageForUsername}}</div>
+                        <label for="lg_username" class="control-label">Username</label>
+                        <input type="text" class="form-control" ng-model="jedai.username" id="lg_username" name="lg_username" placeholder="username">
+                    </div>
+                    <div class="form-group" ng-if="username">
+                        <div ng-if="messageForUsername" class="error-message">{{messageForUsername}}</div>
+                        <label for="lg_password" class="control-label">Password</label>
+                        <input type="password" class="form-control" ng-model="jedai.password" id="lg_password" name="lg_password" placeholder="password">
+                    </div>
+                </div>
+                <div class="text-center">
+                <button type="button" class="btn btn-success" ng-if="username" ng-click="onClickPrevious()">Previous</button>
+                <button type="button" class="btn btn-success" ng-click="onClickNext(jedai)">Next</button>
+            </div>
+            </div>
+        </form>
+    </div>
+    <!-- end:Main Form -->
+</div>
+</div>

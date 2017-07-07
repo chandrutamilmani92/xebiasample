@@ -1,0 +1,26 @@
+<div class="align-contents-planet" ng-controller="MydashboardCtrl">
+<!-- <div class="col-sm-6 search-styles">
+    <population chartid="'42'"></population>
+    <population chartid="'22'"></population>
+</div> -->
+<div class="col-sm-12">
+<input type="text" ng-model="search" class="form-control align-bottom-content" placeholder="search planet">
+</div> 
+<div class="text-center">
+ Click on the planet to view graphical representation
+ </div>
+<div class="col-sm-4 repeat-style" ng-repeat="data in planets | filter:search" ng-click="populateData(data)">
+<div class="card">
+  <div class="container card-style">
+  <div class="card-align">
+    <p>Planet : <b>{{data.name}}</b></p> 
+    <p>Population : {{data.population}}</p> 
+  </div>
+  </div>
+</div>
+</div>
+<population></population>
+</div>
+<script>
+
+</script>
